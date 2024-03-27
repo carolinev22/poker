@@ -1,0 +1,159 @@
+body {
+    background: radial-gradient(#53a371, #376c4a);
+    height: 100%;
+    font-family: Helvetica;
+    padding: 1rem;
+  }
+
+  /* INITIAL LAYOUT */
+
+  .wrapper {
+    display: grid;
+    text-align: center;
+    grid-gap: 20px;
+    height: 100%;
+    grid-template-areas:
+      "deck deck"
+      "hit stay"
+      "bets bets";
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      grid-template-areas:
+        "deck"
+        "hit"
+        "stay"
+        "bets";
+    }
+  }
+
+  #deck {
+    grid-area: deck;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #hit {
+    grid-area: hit;
+  }
+
+  #stay {
+    grid-area: stay;
+  }
+
+  #bets {
+    grid-area: bets;
+  }
+
+  /* CARD STYLES */
+
+  .card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    width: 172px;
+    height: 240px;
+    position: relative;
+    display: inline-block;
+    background: white;
+    border-radius: 4px;
+  }
+
+  .card:before,
+  .card:after {
+    content: attr(value);
+    position: absolute;
+    width: 12px;
+    text-align: center;
+    letter-spacing: -2px;
+  }
+
+  .card:before {
+    top: 4px;
+    left: 4px;
+  }
+
+  .card:after {
+    bottom: 4px;
+    right: 4px;
+    transform: rotate(180deg);
+  }
+
+  .card--heart {
+    color: #e44145;
+  }
+
+  .card--heart:before,
+  .card--heart:after {
+    content: attr(value) " ♥";
+  }
+
+  .card__inner {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    justify-content: center;
+  }
+
+  .card__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card__symbol {
+    display: inline-block;
+    height: 40px;
+    text-align: center;
+  }
+
+  .card__symbol:before {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .card--heart .card__symbol:before {
+    content: "♥";
+  }
+
+  .card__symbol:last-of-type {
+    transform: rotate(180deg);
+  }
+
+  .card__symbol:first-of-type {
+    transform: rotate(0);
+  }
+
+  .card--back {
+    border: 3px solid white;
+    box-sizing: border-box;
+    background: #0054c5;
+    position: relative;
+    left: 100px;
+    top: 20px;
+  }
+
+  /* .card__symbol--rotated,
+  .card__symbol:last-of-type {
+    transform: rotate(180deg);
+  }
+
+  .card__symbol:first-of-type {
+    transform: rotate(0);
+  }
+
+  .card__symbol--big {
+    flex-basis: 60px;
+  }
+
+  .card__symbol--huge {
+    flex-basis: 108px;
+  } */
+
+  .hidden {
+    display: none;
+  }

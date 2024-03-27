@@ -1,0 +1,15 @@
+.btn {
+    background: #333333;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17),
+      0 15px rgba(255, 255, 255, 0.32) inset;
+    border: 2px solid rgb(25, 25, 25);
+    border-radius: 100%;
+    cursor: pointer;
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    font-family: Helvetica;
+    letter-spacing: -1px;
+  }

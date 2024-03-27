@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="chips.css" />
+    <link rel="stylesheet" href="buttons.css" />
+    <title>Black Jack Game</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="deck">
+        <div id="player">
+          <section class="card card--heart" value="2">
+            <div class="card__inner card__inner--centered">
+              <div class="card__column">
+                <div class="card__symbol"></div>
+                <div class="card__symbol"></div>
+              </div>
+            </div>
+          </section>
+          <section class="card card--heart" value="3">
+            <div class="card__inner card__inner--centered">
+              <div class="card__column">
+                <div class="card__symbol"></div>
+                <div class="card__symbol"></div>
+                <div class="card__symbol"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div id="house">
+          <section class="card card--back"></section>
+          <section class="card card--heart" value="3">
+            <div class="card__inner card__inner--centered">
+              <div class="card__column">
+                <div class="card__symbol"></div>
+                <div class="card__symbol"></div>
+                <div class="card__symbol"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div id="hit">
+        <button class="btn">Hit</button>
+      </div>
+      <div id="stay">
+        <button class="btn">Stand</button>
+      </div>
+      <div id="bets">
+        <div class="pokerchip white"></div>
+        <div class="pokerchip red"></div>
+        <div class="pokerchip blue"></div>
+        <div class="pokerchip green"></div>
+      </div>
+    </div>
+  </body>
+</html>
